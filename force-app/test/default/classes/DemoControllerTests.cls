@@ -1,8 +1,16 @@
-@IsTest
-private class DemoControllerTests {
-    @IsTest
-    static void testGetAppVersion() {
-        DemoController demo = new DemoController();
-        System.assertEquals(demo.getAppVersion(), '1.0.0');
+public with sharing class DemoController {
+
+    private String appVersion = '1.0.0';
+
+    /**
+     * An empty constructor for the testing
+     */
+    public DemoController() {}
+
+    /**
+     * Get the version of the SFDX demo app
+     */
+    public String getAppVersion() {
+        return appVersion;
     }
 }
